@@ -1,0 +1,60 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+
+  --color-dks-bg: #0b0b0b;
+  --color-dks-surface: #141414;
+  --color-dks-surface-hover: #1a1a1a;
+  --color-dks-border: #262626;
+  --color-dks-border-strong: #3a3a3a;
+  --color-dks-accent: #ea580c;
+  --color-dks-accent-hover: #f97316;
+}
+
+@layer base {
+  html {
+    background-color: #0b0b0b;
+    color: #f4f4f5;
+    font-family: var(--font-sans);
+    color-scheme: dark;
+  }
+
+  body {
+    margin: 0;
+    background-color: #0b0b0b;
+    color: #f4f4f5;
+    min-height: 100vh;
+    letter-spacing: 0.005em;
+  }
+
+  /* Custom technical dark scrollbars */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #0b0b0b;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #262626;
+    border-radius: 2px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #3f3f46;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
